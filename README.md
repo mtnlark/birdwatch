@@ -30,7 +30,7 @@ pip install -r requirements.txt
 
 ## Documentation
 
-🌐 **View the documentation:** [birdwatch on GitHub Pages](https://levcraig.com/birdwatch)
+🌐 **View the documentation:** [Birdwatch Documentation](https://birdwatch.levcraig.com)
 
 ## Usage
 
