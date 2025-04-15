@@ -28,6 +28,10 @@ source venv/bin/activate  # On Windows, use: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+## Documentation
+
+🌐 **View the documentation:** [birdwatch on GitHub Pages](https://mtnlark.github.io/birdwatch)
+
 ## Usage
 
 ### Log a Sighting
