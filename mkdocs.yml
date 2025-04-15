@@ -60,6 +60,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mtnlark/birdwatch
+  copyright: >
+    🐦 Built with <a href="https://www.python.org/">Python</a>, <a href="https://click.palletsprojects.com/">Click</a>, <a href="https://www.mkdocs.org">MkDocs</a>, and <a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs</a> <br>
+    © 2025 Lev Craig · <a href="https://github.com/mtnlark/birdwatch/blob/main/LICENSE">MIT License</a>
 
 plugins:
   - search
