@@ -1,6 +1,6 @@
 # Birdwatch 🐦
 
-A command-line tool for logging and managing bird sightings.
+A command-line tool for logging and managing bird sightings, with documentation via MkDocs and GitHub Pages.
 
 ## Features
 
