@@ -88,10 +88,11 @@ python -m birdwatch.cli export --filename "my_sightings.csv"
 ## Contributing
 
 This is primarily a solo demo project I built to play around with tracking my own bird sightings locally and to serve as an example of Python CLI development with documentation. While it's mainly here for personal use, feel free to:
+
 - Fork the repository
 - Submit issues for bugs or suggestions
 - Use it as inspiration for your own birding + coding fun!
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](../LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/mtnlark/birdwatch/blob/main/LICENSE) file for details.

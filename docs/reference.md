@@ -65,7 +65,7 @@ N. [count] [species] at [location]
 
 ### export
 
-Exports sightings to CSV format.
+Exports sightings to CSV format. The file is named sightings.csv by default.
 
 ```bash
 python -m birdwatch.cli export [OPTIONS]

@@ -51,6 +51,11 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+To run the documentation site locally:
+```bash
+mkdocs serve
+```
+
 ## Code Style
 
 - Follow PEP 8 guidelines
@@ -93,7 +98,7 @@ Remember, Birdwatch is intentionally simple! It's meant to be:
 - An example of Python CLI development
 - A documentation reference
 
-If you're a dedicated birder who wants more comprehensive features, like adding media or tracking sightings in detail over the long term, you'll probably be better served by [eBird](https://ebird.org), [iNaturalist](https://www.inaturalist.org), and similarly full-featured birding apps.
+If you're a dedicated birder who wants more comprehensive features, like adding media or tracking sightings in detail over the long term, you'll probably be better served [eBird](https://ebird.org), [iNaturalist](https://www.inaturalist.org), and similarly full-featured birding apps.
 
 ## Questions?
 
