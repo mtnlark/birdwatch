@@ -5,10 +5,11 @@ import os
 import click
 import csv
 from datetime import datetime
+from typing import List, Dict, Optional, Union
 
 SIGHTINGS_FILE = "sightings.json"
 
-def load_sightings():
+def load_sightings() -> List[Dict[str, Union[str, int]]]:
     """Load bird sightings from the JSON storage file.
     
     Returns:
@@ -20,7 +21,7 @@ def load_sightings():
     with open(SIGHTINGS_FILE, 'r') as f:   
         return json.load(f)
     
-def save_sightings(sightings):
+def save_sightings(sightings: List[Dict[str, Union[str, int]]]) -> None:
     """Save bird sightings to the JSON storage file.
     
     Args:
@@ -29,7 +30,7 @@ def save_sightings(sightings):
     with open(SIGHTINGS_FILE, 'w') as f:
         json.dump(sightings, f, indent=2)
 
-def log_sighting(species, location, notes, count=1):
+def log_sighting(species: str, location: str, notes: str, count: int = 1) -> Dict[str, Union[str, int]]:
     """Log a new bird sighting and save it to the storage file.
     
     Args:
@@ -57,7 +58,7 @@ def log_sighting(species, location, notes, count=1):
     click.echo(f"Sighting logged: {sighting['count']} {sighting['species']} at {sighting['location']}")
     return sighting
 
-def list_sightings(species_filter=None, location_filter=None):
+def list_sightings(species_filter: Optional[str] = None, location_filter: Optional[str] = None) -> None:
     """Display all logged bird sightings, optionally filtered by species and/or location.
     
     Args:
@@ -108,7 +109,7 @@ def list_sightings(species_filter=None, location_filter=None):
         if s['notes']:
             click.echo(f"   Notes: {s['notes']}")
 
-def export_sightings_to_csv(filename=None):
+def export_sightings_to_csv(filename: Optional[str] = None) -> Optional[str]:
     """Export all bird sightings to a CSV file.
     
     Args:

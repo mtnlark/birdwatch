@@ -1,8 +1,9 @@
 import click
 from birdwatch import sightings
+from typing import Optional
 
 @click.group()
-def cli():
+def cli() -> None:
     """Command line interface for birdwatch, a tool for logging and managing bird sightings.
     
     This CLI provides commands for logging new bird sightings, listing existing sightings, and filtering by species.
@@ -15,7 +16,7 @@ def cli():
 @click.option('--count', default=1, help="Number of individuals seen", show_default=True)
 @click.option('--notes', prompt="Notes (optional)", help="Additional notes about the sighting", 
               default='', show_default=False)
-def log(species, location, count, notes): 
+def log(species: str, location: str, count: int, notes: str) -> None: 
     """Log a new bird sighting in the system.
     
     Args:
@@ -33,7 +34,7 @@ def log(species, location, count, notes):
 @cli.command()
 @click.option('--species', help="Filter results by species name (optional)")
 @click.option('--location', help="Filter results by location (optional)")
-def list(species, location):
+def list(species: Optional[str], location: Optional[str]) -> None:
     """List recent bird sightings from the database.
     
     Args:
@@ -49,7 +50,7 @@ def list(species, location):
     sightings.list_sightings(species, location)
 
 @cli.command()
-def hello():
+def hello() -> None:
     """Display a welcome message from the birdwatch application.
     
     This is a simple test command that prints a friendly greeting.
@@ -58,7 +59,7 @@ def hello():
 
 @cli.command()
 @click.option('--filename', help="Name of the CSV file to create (optional)")
-def export(filename):
+def export(filename: Optional[str]) -> None:
     """Export all bird sightings to a CSV file.
     
     Args:

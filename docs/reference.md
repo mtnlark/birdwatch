@@ -8,7 +8,7 @@ This document provides detailed technical reference for all Birdwatch commands, 
 
 These options are available for all commands:
 
-```bash
+```text
 --help    Show help message and exit
 ```
 
@@ -31,7 +31,7 @@ python -m birdwatch.cli log SPECIES [OPTIONS]
 
 #### Return Value
 
-Returns a dictionary containing the sighting data:
+Returns a dictionary containing the sighting data.
 ```python
 {
     "species": str,
@@ -53,8 +53,8 @@ python -m birdwatch.cli list [OPTIONS]
 
 | Parameter | Required | Type | Default | Description |
 |-----------|----------|------|---------|-------------|
-| `--species` | No | string | None | Filter by species name (case-insensitive) |
-| `--location` | No | string | None | Filter by location (case-insensitive) |
+| `--species` | No | string | None | Filter by species name (case insensitive) |
+| `--location` | No | string | None | Filter by location (case insensitive) |
 
 #### Output Format
 
@@ -65,7 +65,7 @@ N. [count] [species] at [location]
 
 ### export
 
-Exports sightings to CSV format. The file is named sightings.csv by default.
+Exports sightings to CSV format. The file is named `--sightings.csv` by default.
 
 ```bash
 python -m birdwatch.cli export [OPTIONS]
@@ -140,10 +140,10 @@ Sightings are stored in `sightings.json` using the following format:
 
 ## Dependencies
 
-- *click:* Command line interface creation
-- *json:* Data storage
-- *csv:* Data export
-- *datetime:* Timestamp generation
+- `--click`: Command line interface creation
+- `--json`: Data storage
+- `--csv`: Data export
+- `--datetime`: Timestamp generation
 
 ## Environment Variables
 
@@ -156,16 +156,6 @@ Currently, Birdwatch does not use any environment variables.
 - Notes length: No explicit limit
 - Location name length: No explicit limit
 - Number of sightings: No explicit limit
-
-## Future Considerations
-
-Potential future enhancements that may affect the API:
-
-- Date/time filtering
-- Tag-based filtering
-- Weather integration
-- Geographic coordinates
-- Photo attachments
 
 ## Version Compatibility
 
